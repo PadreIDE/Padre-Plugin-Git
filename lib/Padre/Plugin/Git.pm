@@ -425,7 +425,7 @@ sub github_pull_request {
 	unless ( $user && $token ) {
 		$main->error(
 			Wx::gettext(
-				      'Error: missing $ENV{GITHUB_USER} and $ENV{GITHUB_TOKEN}' . "\n"
+					'Error: missing $ENV{GITHUB_USER} and $ENV{GITHUB_TOKEN}' . "\n"
 					. 'See http://padre.perlide.org/trac/wiki/PadrePluginGit' . "\n"
 					. 'Wiki page for more info.'
 			)
@@ -798,13 +798,13 @@ Basic git cmd commands, plus a bit more, which is a bit E<beta>etaish
 
 =over 4
 
-=item * if you configure your local ENV's with GitHuB Access you can also do GitHub Pull requests,
+=item * if you configure your local ENV with GitHub Access you can also do GitHub Pull requests,
 
 =item * plus if you use {{$NEXT}} in your Changes file it will append commit messages below.
 see L<wiki|http://padre.perlide.org/trac/wiki/PadrePluginGit> for more info.
 
 =back
-    
+
 =head1 METHODS
 
 =over 4
@@ -823,12 +823,12 @@ see L<wiki|http://padre.perlide.org/trac/wiki/PadrePluginGit> for more info.
 
 =item * git_patch
 
-=item * github_pull_request 
- 
-=item * load_dialog_output 
- 
-=item * menu_plugins_simple 
-	
+=item * github_pull_request
+
+=item * load_dialog_output
+
+=item * menu_plugins_simple
+
 =item *	on_finish
 
 =item *	padre_interfaces
@@ -845,7 +845,7 @@ see L<wiki|http://padre.perlide.org/trac/wiki/PadrePluginGit> for more info.
 
 =item * write_changes
 
-use CPAN::Changes to write git commits to project Change file, 
+use CPAN::Changes to write git commits to project Change file,
 this abuses the {{$NEXT}} token as a valid version
 see CPAN::Changes::Spec for format
 
@@ -857,7 +857,7 @@ To be able to do a GitHub Pull request, the following need to be configured.
 
 	$ENV{GITHUB_USER}
 	$ENV{GITHUB_TOKEN}
-  
+
 
 =head1 AUTHOR
 
@@ -877,7 +877,7 @@ Please report any bugs or feature requests to L<http://padre.perlide.org/>
 
 =head1 COPYRIGHT & LICENSE
 
-Copyright E<copy> E<beta> 2008-2012 The Padre development team as listed in Padre.pm in the
+Copyright E<copy> E<beta> 2008-2013 The Padre development team as listed in Padre.pm in the
 Padre distribution all rights reserved.
 
 This program is free software; you can redistribute it and/or modify it

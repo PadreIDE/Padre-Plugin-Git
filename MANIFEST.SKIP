@@ -3,6 +3,7 @@
 \bCVS\b
 ,v$
 \B\.svn\b
+\B\.git\b
 \B\.cvsignore$
 
 # Avoid Makemaker generated and utility files.
@@ -29,6 +30,8 @@
 \#$
 \.#
 \.rej$
+\btmp
+\bTODO
 
 # Avoid OS-specific files/dirs
 #   Mac OSX metadata
@@ -36,8 +39,17 @@
 #   Mac OSX SMB mount metadata files
 \B\._
 # Avoid archives of this distribution
-\bPadre-[\d\.\_]+
+#\bPadre-Plugin-Git-[\d\.\_]+
+\.tar.gz
+
+# avoid pot files (gettext)
+\.pot$
+
 \bxt
 \bscripts
 Debian_CPANTS.txt
+\btravis.yml$
+\bperltidy*
+\bMYMETA*
+\.md$
 

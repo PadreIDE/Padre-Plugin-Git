@@ -20,7 +20,7 @@ sub new {
 	my $main  = shift;
 	my $title = shift || '';
 	my $text  = shift || '';
-	
+
 	# Create the dialogue
 	my $self = $class->SUPER::new($main);
 

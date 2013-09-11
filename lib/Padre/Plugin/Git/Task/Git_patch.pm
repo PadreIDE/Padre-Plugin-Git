@@ -62,10 +62,8 @@ sub run {
 	} else {
 		$system = qq(xterm -sb -e "$cmd ; sleep 1000" &);
 	}
-	
+
 	# say $system;
-
-
 
 	my $git_patch;
 	require Padre::Util;

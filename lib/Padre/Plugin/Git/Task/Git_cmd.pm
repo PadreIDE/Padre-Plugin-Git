@@ -52,7 +52,7 @@ sub run {
 		$git_cmd->{output} = $git_cmd->{error};
 		$git_cmd->{error}  = undef;
 	}
-	
+
 	#saving to $self makes thing availbe to on_finish under $task
 
 	$self->{error}  = $git_cmd->{error};
