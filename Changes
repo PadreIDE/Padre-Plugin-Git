@@ -1,7 +1,7 @@
 Revision history for Padre-Plugin-Git
 
 {{$NEXT}}
- - various tweaks after running xt's (BOWTIE)
+ - various tweaks after running xt's
  - add typo found by perlbotics++
  - remove an unwanted 0.11, that crepped in from an update-version script,
    this is also a test (BOWTIE)
