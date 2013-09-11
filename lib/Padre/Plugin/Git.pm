@@ -180,6 +180,9 @@ sub menu_plugins_simple {
 							Wx::gettext('log pretty') => sub {
 								$self->git_cmd( 'log --pretty=format:"%h %s" --graph', NONE );
 							},
+							Wx::gettext('log graph last 100 commits') => sub {
+								$self->git_cmd( "log --graph --all --format=format:'%h - (%ar) %s - %an %d' --abbrev-commit --date=relative --cherry-pick --max-count=100", NONE );
+							},
 						],
 						Wx::gettext('Blame') => [
 							Wx::gettext('Blame, Current file') => sub {
@@ -584,7 +587,7 @@ sub event_on_context_menu {
 
 	my $tab_id = $self->main->editor_of_file( $document->{filename} );
 
-	if ( $self->{open_file_info}->{$tab_id}->{'vcs'} =~ m/Git/sxm ) {
+	if ( eval { $self->{open_file_info}->{$tab_id}->{'vcs'} =~ m/Git/sxm } ) {
 
 		$menu->AppendSeparator;
 
