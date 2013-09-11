@@ -1,4 +1,4 @@
-Padre-Plugin-Git
+Padre-Plugin-Git [![Build Status](https://travis-ci.org/kevindawson/Padre-Plugin-Git.png?branch=master)](https://travis-ci.org/kevindawson/Padre-Plugin-Git)
 
 The README is used to introduce the module and provide instructions on
 how to install the module, any machine dependencies it may have (for
