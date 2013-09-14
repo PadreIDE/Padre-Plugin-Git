@@ -1,14 +1,15 @@
 package Padre::Plugin::Git::Message;
 
 use v5.10;
-use strictures 1;
+use strict;
+use warnings;
 
 use Padre::Unload                    ();
 use Padre::Plugin::Git::FBP::Message ();
 use File::Spec;
 use File::Slurp;
 
-our $VERSION = '0.11';
+our $VERSION = '0.12';
 use parent qw(
 	Padre::Plugin::Git::FBP::Message
 	Padre::Plugin
@@ -86,13 +87,15 @@ Perl programming -> TIOBE
 
 =pod
 
+=encoding utf8
+
 =head1 NAME
 
 Padre::Plugin::Git::Message - Git plugin for Padre, The Perl IDE.
 
 =head1 VERSION
 
-version 0.11
+version 0.12
 
 =head1 DESCRIPTION
 
@@ -128,20 +131,18 @@ etc.), refer to L<Padre::Plugin::Git>.
 
 =head1 AUTHOR
 
-Kevin Dawson E<lt>bowtie@cpan.orgE<gt>
+See L<Padre::Plugin::Git>
 
-=head1 COPYRIGHT AND LICENSE
+=head2 CONTRIBUTORS
 
-Copyright (c) 2012 kevin dawson, all rights reserved.
+See L<Padre::Plugin::Git>
 
-This is free software; you can redistribute it and/or modify it under
-the same terms as the Perl 5 programming language system itself.
+=head1 COPYRIGHT
+
+See L<Padre::Plugin::Git>
+
+=head1 LICENSE
+
+See L<Padre::Plugin::Git>
 
 =cut
-
-
-# Copyright 2008-2012 The Padre development team as listed in Padre.pm.
-# LICENSE
-# This program is free software; you can redistribute it and/or
-# modify it under the same terms as Perl 5 itself.
-
