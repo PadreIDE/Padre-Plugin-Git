@@ -6,16 +6,17 @@ local $OUTPUT_AUTOFLUSH = 1;
 
 BEGIN {
 	unless ($ENV{RELEASE_TESTING}) {
-		use Test::More;
+		require Test::More;
 		Test::More::plan(
-			skip_all => 'Author tests, not required for installation.');
+			skip_all => 'these tests are for release candidate testing');
 	}
 }
 
-use Test::Requires { 'Test::Pod' => 1.48 };
+use Test::Requires {'Test::Tabs' => 0.003};
 
-all_pod_files_ok();
+all_perl_files_ok();
 
-done_testing();
+#done_testing();
 
 __END__
+

@@ -1,4 +1,4 @@
-Padre-Plugin-Git
+Padre-Plugin-Git [![Build Status](https://travis-ci.org/kevindawson/Padre-Plugin-Git.png?branch=master)](https://travis-ci.org/kevindawson/Padre-Plugin-Git)
 
 The README is used to introduce the module and provide instructions on
 how to install the module, any machine dependencies it may have (for
@@ -30,11 +30,8 @@ perldoc command.
 
 You can also look for information at:
 
-    wiki
-        http://padre.perlide.org/trac/wiki/PadrePluginGit
-
-    RT, GitHub issues tracker (report bugs here)
-        https://github.com/PadreIDE/Padre-Plugin-Git/issues
+    RT, CPAN's request tracker (report bugs here)
+        http://rt.cpan.org/NoAuth/Bugs.html?Dist=Padre-Plugin-Git
 
     AnnoCPAN, Annotated CPAN documentation
         http://annocpan.org/dist/Padre-Plugin-Git
@@ -42,13 +39,13 @@ You can also look for information at:
     CPAN Ratings
         http://cpanratings.perl.org/d/Padre-Plugin-Git
 
-    Search MetaCPAN
-        https://metacpan.org/release/Padre-Plugin-Git
+    Search CPAN
+        http://search.cpan.org/dist/Padre-Plugin-Git/
 
 
 LICENSE AND COPYRIGHT
 
-Copyright (C) 2013 kevin dawson
+Copyright (C) 2012 kevin dawson
 
 This program is free software; you can redistribute it and/or modify it
 under the terms of either: the GNU General Public License as published

@@ -6,16 +6,23 @@ local $OUTPUT_AUTOFLUSH = 1;
 
 BEGIN {
 	unless ($ENV{RELEASE_TESTING}) {
-		use Test::More;
+		require Test::More;
 		Test::More::plan(
 			skip_all => 'Author tests, not required for installation.');
 	}
 }
 
-use Test::Requires { 'Test::Pod' => 1.48 };
+use Test::Requires {'Perl::Critic' => 1.118, 'Test::Perl::Critic' => 1.02,};
 
-all_pod_files_ok();
+Test::Perl::Critic->import(
+	-severity => 4,
+	-verbose  => 4,
+	-exclude  => ['RequireRcsKeywords', 'constant'],
+);
+
+all_critic_ok();
 
 done_testing();
 
 __END__
+

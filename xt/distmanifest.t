@@ -7,15 +7,15 @@ local $OUTPUT_AUTOFLUSH = 1;
 BEGIN {
 	unless ($ENV{RELEASE_TESTING}) {
 		use Test::More;
-		Test::More::plan(
-			skip_all => 'Author tests, not required for installation.');
+		Test::More::plan(skip_all => 'Release Candidate testing, not required for installation.');
 	}
 }
 
-use Test::Requires { 'Test::Pod' => 1.48 };
+use Test::Requires { 'Test::DistManifest' => 1.012 };
 
-all_pod_files_ok();
+manifest_ok('MANIFEST', 'MANIFEST.SKIP');
 
 done_testing();
 
 __END__
+

@@ -1,9 +1,8 @@
 package Padre::Plugin::Git;
 
 use 5.010001;
-use strictures 1;
-# use warnings;
-# use strict;
+use strict;
+use warnings;
 
 use Padre::Unload;
 use Padre::Config     ();
@@ -17,7 +16,7 @@ use Try::Tiny;
 use File::Slurp;
 use CPAN::Changes;
 
-our $VERSION = '0.11';
+our $VERSION = '0.12';
 use parent qw(
 	Padre::Plugin
 	Padre::Role::Task
@@ -179,6 +178,9 @@ sub menu_plugins_simple {
 							},
 							Wx::gettext('log pretty') => sub {
 								$self->git_cmd( 'log --pretty=format:"%h %s" --graph', NONE );
+							},
+							Wx::gettext('log graph last 100 commits') => sub {
+								$self->git_cmd( "log --graph --all --format=format:'%h - (%ar) %s - %an %d' --abbrev-commit --date=relative --cherry-pick --max-count=100", NONE );
 							},
 						],
 						Wx::gettext('Blame') => [
@@ -421,8 +423,7 @@ sub github_pull_request {
 
 	unless ( $user && $token ) {
 		$main->error(
-			Wx::gettext(
-				      'Error: missing $ENV{GITHUB_USER} and $ENV{GITHUB_TOKEN}' . "\n"
+			Wx::gettext( 'Error: missing $ENV{GITHUB_USER} and $ENV{GITHUB_TOKEN}' . "\n"
 					. 'See http://padre.perlide.org/trac/wiki/PadrePluginGit' . "\n"
 					. 'Wiki page for more info.'
 			)
@@ -584,7 +585,7 @@ sub event_on_context_menu {
 
 	my $tab_id = $self->main->editor_of_file( $document->{filename} );
 
-	if ( $self->{open_file_info}->{$tab_id}->{'vcs'} =~ m/Git/sxm ) {
+	if ( eval { $self->{open_file_info}->{$tab_id}->{'vcs'} =~ m/Git/sxm } ) {
 
 		$menu->AppendSeparator;
 
@@ -769,13 +770,15 @@ Perl programming -> TIOBE
 
 =pod
 
+=encoding utf8
+
 =head1 NAME
 
 Padre::Plugin::Git - A Simple Git interface for Padre, the Perl IDE,
 
 =head1 VERSION
 
-version 0.11
+version 0.12
 
 =head1 SYNOPSIS
 
@@ -795,13 +798,13 @@ Basic git cmd commands, plus a bit more, which is a bit E<beta>etaish
 
 =over 4
 
-=item * if you configure your local ENV's with GitHuB Access you can also do GitHub Pull requests,
+=item * if you configure your local ENV with GitHub Access you can also do GitHub Pull requests,
 
 =item * plus if you use {{$NEXT}} in your Changes file it will append commit messages below.
 see L<wiki|http://padre.perlide.org/trac/wiki/PadrePluginGit> for more info.
 
 =back
-    
+
 =head1 METHODS
 
 =over 4
@@ -820,12 +823,12 @@ see L<wiki|http://padre.perlide.org/trac/wiki/PadrePluginGit> for more info.
 
 =item * git_patch
 
-=item * github_pull_request 
- 
-=item * load_dialog_output 
- 
-=item * menu_plugins_simple 
-	
+=item * github_pull_request
+
+=item * load_dialog_output
+
+=item * menu_plugins_simple
+
 =item *	on_finish
 
 =item *	padre_interfaces
@@ -842,7 +845,7 @@ see L<wiki|http://padre.perlide.org/trac/wiki/PadrePluginGit> for more info.
 
 =item * write_changes
 
-use CPAN::Changes to write git commits to project Change file, 
+use CPAN::Changes to write git commits to project Change file,
 this abuses the {{$NEXT}} token as a valid version
 see CPAN::Changes::Spec for format
 
@@ -854,7 +857,7 @@ To be able to do a GitHub Pull request, the following need to be configured.
 
 	$ENV{GITHUB_USER}
 	$ENV{GITHUB_TOKEN}
-  
+
 
 =head1 AUTHOR
 
@@ -865,26 +868,29 @@ Kaare Rasmussen, E<lt>kaare@cpan.orgE<gt>
 
 =head2 CONTRIBUTORS
 
+Alexandr Ciornii E<lt>alexchorny@gmail.comE<gt>
+
+Ryan Niebur E<lt>ryanryan52@gmail.comE<gt>
+
 Dominique Dumont E<lt>dod@debian.orgE<gt>
 
+perlbotics E<lt>perlbotics@yahoo.deE<gt>
 
 =head1 BUGS
 
-Please report any bugs or feature requests to L<http://padre.perlide.org/>
+Please report any bugs or feature requests to L<https://github.com/PadreIDE/Padre-Plugin-Git/issues>
 
-=head1 COPYRIGHT & LICENSE
+=head1 COPYRIGHT
 
-Copyright E<copy> E<beta> 2008-2012 The Padre development team as listed in Padre.pm in the
-Padre distribution all rights reserved.
+Copyright E<copy> 2009-2011 Kaare Rasmussen
 
-This program is free software; you can redistribute it and/or modify it
-under the same terms as Perl itself.
+Copyright E<copy> 2009-2013 the Padre::Plugin::Git  L</AUTHOR> and L</CONTRIBUTORS>
+as listed above.
 
+=head1 LICENSE
+
+This program is free software; you can redistribute it and/or modify
+ it under the same terms as Perl 5 itself.
 
 =cut
-
-# Copyright 2008-2012 The Padre development team as listed in Padre.pm.
-# LICENSE
-# This program is free software; you can redistribute it and/or
-# modify it under the same terms as Perl 5 itself.
 
