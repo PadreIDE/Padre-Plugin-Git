@@ -17,7 +17,7 @@ use Try::Tiny;
 use File::Slurp;
 use CPAN::Changes;
 
-our $VERSION = '0.11';
+our $VERSION = '0.12';
 use parent qw(
 	Padre::Plugin
 	Padre::Role::Task
@@ -780,7 +780,7 @@ Padre::Plugin::Git - A Simple Git interface for Padre, the Perl IDE,
 
 =head1 VERSION
 
-version 0.11
+version 0.12
 
 =head1 SYNOPSIS
 
