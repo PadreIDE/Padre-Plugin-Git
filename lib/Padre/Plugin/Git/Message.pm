@@ -8,7 +8,7 @@ use Padre::Plugin::Git::FBP::Message ();
 use File::Spec;
 use File::Slurp;
 
-our $VERSION = '0.11';
+our $VERSION = '0.12';
 use parent qw(
 	Padre::Plugin::Git::FBP::Message
 	Padre::Plugin
@@ -94,7 +94,7 @@ Padre::Plugin::Git::Message - Git plugin for Padre, The Perl IDE.
 
 =head1 VERSION
 
-version 0.11
+version 0.12
 
 =head1 DESCRIPTION
 
