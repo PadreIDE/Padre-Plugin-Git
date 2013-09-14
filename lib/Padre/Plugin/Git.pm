@@ -772,6 +772,8 @@ Perl programming -> TIOBE
 
 =pod
 
+=encoding utf8
+
 =head1 NAME
 
 Padre::Plugin::Git - A Simple Git interface for Padre, the Perl IDE,
@@ -861,15 +863,20 @@ To be able to do a GitHub Pull request, the following need to be configured.
 
 =head1 AUTHOR
 
-Kevin Dawson E<lt>bowtie@cpan.orgE<gt>
-
 Kaare Rasmussen, E<lt>kaare@cpan.orgE<gt>
+
+Kevin Dawson E<lt>bowtie@cpan.orgE<gt>
 
 
 =head2 CONTRIBUTORS
 
+Alexandr Ciornii E<lt>alexchorny@gmail.comE<gt>
+
+Ryan Niebur E<lt>ryanryan52@gmail.comE<gt>
+
 Dominique Dumont E<lt>dod@debian.orgE<gt>
 
+perlbotics E<lt>perlbotics@yahoo.deE<gt>
 
 =head1 BUGS
 
@@ -877,17 +884,8 @@ Please report any bugs or feature requests to L<http://padre.perlide.org/>
 
 =head1 COPYRIGHT & LICENSE
 
-Copyright E<copy> E<beta> 2008-2013 The Padre development team as listed in Padre.pm in the
-Padre distribution all rights reserved.
-
-This program is free software; you can redistribute it and/or modify it
-under the same terms as Perl itself.
-
+Copyright E<copy> 2008-2013 the Padre::Plugin::Git  L</AUTHOR> and L</CONTRIBUTORS>
+as listed above.
 
 =cut
-
-# Copyright 2008-2012 The Padre development team as listed in Padre.pm.
-# LICENSE
-# This program is free software; you can redistribute it and/or
-# modify it under the same terms as Perl 5 itself.
 
