@@ -6,7 +6,7 @@ use warnings FATAL => 'all';
 use English qw( -no_match_vars );
 local $OUTPUT_AUTOFLUSH = 1;
 
-use Test::More tests => 15;
+use Test::More tests => 14;
 
 # Check dependencies that are not checked but Padre::Plugin::Git.pm itself
 BEGIN {
@@ -21,7 +21,6 @@ BEGIN {
 	use_ok('Try::Tiny',          '0.18');
 	use_ok('constant',           '1.27');
 	use_ok('parent',             '0.227');
-	use_ok('strictures',         '1.004004');
 	use_ok('Test::Deep',         '0.108');
 	use_ok('Test::More',         '0.98');
 	use_ok('Test::Requires',     '0.07');

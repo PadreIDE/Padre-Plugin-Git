@@ -1,9 +1,8 @@
 package Padre::Plugin::Git;
 
 use 5.010001;
-use strictures 1;
-# use warnings;
-# use strict;
+use strict;
+use warnings;
 
 use Padre::Unload;
 use Padre::Config     ();
@@ -424,8 +423,7 @@ sub github_pull_request {
 
 	unless ( $user && $token ) {
 		$main->error(
-			Wx::gettext(
-					'Error: missing $ENV{GITHUB_USER} and $ENV{GITHUB_TOKEN}' . "\n"
+			Wx::gettext( 'Error: missing $ENV{GITHUB_USER} and $ENV{GITHUB_TOKEN}' . "\n"
 					. 'See http://padre.perlide.org/trac/wiki/PadrePluginGit' . "\n"
 					. 'Wiki page for more info.'
 			)
@@ -863,9 +861,9 @@ To be able to do a GitHub Pull request, the following need to be configured.
 
 =head1 AUTHOR
 
-Kaare Rasmussen, E<lt>kaare@cpan.orgE<gt>
-
 Kevin Dawson E<lt>bowtie@cpan.orgE<gt>
+
+Kaare Rasmussen, E<lt>kaare@cpan.orgE<gt>
 
 
 =head2 CONTRIBUTORS
@@ -880,12 +878,19 @@ perlbotics E<lt>perlbotics@yahoo.deE<gt>
 
 =head1 BUGS
 
-Please report any bugs or feature requests to L<http://padre.perlide.org/>
+Please report any bugs or feature requests to L<https://github.com/PadreIDE/Padre-Plugin-Git/issues>
 
-=head1 COPYRIGHT & LICENSE
+=head1 COPYRIGHT
 
-Copyright E<copy> 2008-2013 the Padre::Plugin::Git  L</AUTHOR> and L</CONTRIBUTORS>
+Copyright E<copy> 2009-2011 Kaare Rasmussen
+
+Copyright E<copy> 2009-2013 the Padre::Plugin::Git  L</AUTHOR> and L</CONTRIBUTORS>
 as listed above.
+
+=head1 LICENSE
+
+This program is free software; you can redistribute it and/or modify
+ it under the same terms as Perl 5 itself.
 
 =cut
 

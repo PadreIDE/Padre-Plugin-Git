@@ -16,6 +16,7 @@ lib/Padre/Plugin/Git/Message.pm
 lib/Padre/Plugin/Git/Output.pm
 lib/Padre/Plugin/Git/Task/Git_cmd.pm
 lib/Padre/Plugin/Git/Task/Git_patch.pm
+LICENSE
 Makefile.PL
 MANIFEST			This list of files
 META.yml
@@ -29,3 +30,4 @@ t/01-compile.t
 t/02-exports.t
 t/03-pod.t
 t/04-pod-coverage.t
+t/05-report-prereqs.t

@@ -17,15 +17,16 @@ requires Pithub        0.0102
 requires Try::Tiny     0.18
 requires constant      1.27
 requires parent        0.227
-requires strictures    1.004004
 
-test_requires Data::Printer 0.35
 test_requires Test::Deep    0.11
 test_requires Test::More    0.98
+test_requires Test::Requires 0.07
 
-recommends Test::Pod           1.48
-recommends Test::Pod::Coverage 1.08
-
+recommends ExtUtils::MakeMaker   6.76
+recommends File::Spec::Functions 3.4
+recommends List::Util            1.32
+recommends Test::Pod             1.48
+recommends Test::Pod::Coverage   1.08
 
 homepage    http://padre.perlide.org/trac/wiki/PadrePluginGit
 bugtracker  https://github.com/PadreIDE/Padre-Plugin-Git/issues

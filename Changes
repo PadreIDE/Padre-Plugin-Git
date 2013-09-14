@@ -1,20 +1,14 @@
 Revision history for Padre-Plugin-Git
 
-0.12 2013-09-14
- - update POD
+0.12 2013-09-15
  - various tweaks after running xt's
  - add typo found by perlbotics++
  - remove an unwanted 0.11, that crepped in from an update-version script,
    this is also a test (BOWTIE)
  - turn off message echo to term [0e2335e]
  - tweak contents, remove core modules [cd5db46]
+ - update POD
  - Update Version [30df3d8]
- - Update Version [4341e6a]
- - Update Version [8778250]
- - Update Version [18aa4e7]
- - Update Version [d03fa5e]
- - Update Version [f8d87ce]
- - Update Version [ad3892f]
 
 0.11 2012-11-29
  - silly me forgot to add install share to Makrfile.PL (BOWTIE)

@@ -1,7 +1,8 @@
 package Padre::Plugin::Git::Task::Git_patch;
 
 use v5.10;
-use strictures 1;
+use strict;
+use warnings;
 
 use Carp qw( croak );
 our $VERSION = '0.12';

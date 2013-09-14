@@ -1,7 +1,8 @@
 package Padre::Plugin::Git::Output;
 
 use v5.10;
-use strictures 1;
+use strict;
+use warnings;
 
 use Padre::Unload ();
 use Padre::Plugin::Git::FBP::Output ();
