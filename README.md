@@ -30,16 +30,8 @@ perldoc command.
 
 You can also look for information at:
 
-<<<<<<< HEAD
     RT, CPAN's request tracker (report bugs here)
         http://rt.cpan.org/NoAuth/Bugs.html?Dist=Padre-Plugin-Git
-=======
-    wiki
-        http://padre.perlide.org/trac/wiki/PadrePluginGit
-
-    RT, GitHub issues tracker (report bugs here)
-        https://github.com/PadreIDE/Padre-Plugin-Git/issues
->>>>>>> 42555c5dc8988df26a4cb95b9f17d8a516a03bff
 
     AnnoCPAN, Annotated CPAN documentation
         http://annocpan.org/dist/Padre-Plugin-Git
@@ -47,22 +39,13 @@ You can also look for information at:
     CPAN Ratings
         http://cpanratings.perl.org/d/Padre-Plugin-Git
 
-<<<<<<< HEAD
     Search CPAN
         http://search.cpan.org/dist/Padre-Plugin-Git/
-=======
-    Search MetaCPAN
-        https://metacpan.org/release/Padre-Plugin-Git
->>>>>>> 42555c5dc8988df26a4cb95b9f17d8a516a03bff
 
 
 LICENSE AND COPYRIGHT
 
-<<<<<<< HEAD
 Copyright (C) 2012 kevin dawson
-=======
-Copyright (C) 2013 kevin dawson
->>>>>>> 42555c5dc8988df26a4cb95b9f17d8a516a03bff
 
 This program is free software; you can redistribute it and/or modify it
 under the terms of either: the GNU General Public License as published

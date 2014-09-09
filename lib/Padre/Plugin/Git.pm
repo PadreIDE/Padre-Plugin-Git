@@ -1,9 +1,14 @@
 package Padre::Plugin::Git;
 
 use 5.010001;
+<<<<<<< HEAD
 use strictures 1;
 # use warnings;
 # use strict;
+=======
+use strict;
+use warnings;
+>>>>>>> 42555c5dc8988df26a4cb95b9f17d8a516a03bff
 
 use Padre::Unload;
 use Padre::Config     ();
@@ -17,7 +22,11 @@ use Try::Tiny;
 use File::Slurp;
 use CPAN::Changes;
 
+<<<<<<< HEAD
 our $VERSION = '0.11';
+=======
+our $VERSION = '0.12';
+>>>>>>> 42555c5dc8988df26a4cb95b9f17d8a516a03bff
 use parent qw(
 	Padre::Plugin
 	Padre::Role::Task
@@ -180,6 +189,12 @@ sub menu_plugins_simple {
 							Wx::gettext('log pretty') => sub {
 								$self->git_cmd( 'log --pretty=format:"%h %s" --graph', NONE );
 							},
+<<<<<<< HEAD
+=======
+							Wx::gettext('log graph last 100 commits') => sub {
+								$self->git_cmd( "log --graph --all --format=format:'%h - (%ar) %s - %an %d' --abbrev-commit --date=relative --cherry-pick --max-count=100", NONE );
+							},
+>>>>>>> 42555c5dc8988df26a4cb95b9f17d8a516a03bff
 						],
 						Wx::gettext('Blame') => [
 							Wx::gettext('Blame, Current file') => sub {
@@ -421,8 +436,12 @@ sub github_pull_request {
 
 	unless ( $user && $token ) {
 		$main->error(
+<<<<<<< HEAD
 			Wx::gettext(
 				      'Error: missing $ENV{GITHUB_USER} and $ENV{GITHUB_TOKEN}' . "\n"
+=======
+			Wx::gettext( 'Error: missing $ENV{GITHUB_USER} and $ENV{GITHUB_TOKEN}' . "\n"
+>>>>>>> 42555c5dc8988df26a4cb95b9f17d8a516a03bff
 					. 'See http://padre.perlide.org/trac/wiki/PadrePluginGit' . "\n"
 					. 'Wiki page for more info.'
 			)
@@ -584,7 +603,11 @@ sub event_on_context_menu {
 
 	my $tab_id = $self->main->editor_of_file( $document->{filename} );
 
+<<<<<<< HEAD
 	if ( $self->{open_file_info}->{$tab_id}->{'vcs'} =~ m/Git/sxm ) {
+=======
+	if ( eval { $self->{open_file_info}->{$tab_id}->{'vcs'} =~ m/Git/sxm } ) {
+>>>>>>> 42555c5dc8988df26a4cb95b9f17d8a516a03bff
 
 		$menu->AppendSeparator;
 
@@ -769,13 +792,22 @@ Perl programming -> TIOBE
 
 =pod
 
+<<<<<<< HEAD
+=======
+=encoding utf8
+
+>>>>>>> 42555c5dc8988df26a4cb95b9f17d8a516a03bff
 =head1 NAME
 
 Padre::Plugin::Git - A Simple Git interface for Padre, the Perl IDE,
 
 =head1 VERSION
 
+<<<<<<< HEAD
 version 0.11
+=======
+version 0.12
+>>>>>>> 42555c5dc8988df26a4cb95b9f17d8a516a03bff
 
 =head1 SYNOPSIS
 
@@ -795,13 +827,21 @@ Basic git cmd commands, plus a bit more, which is a bit E<beta>etaish
 
 =over 4
 
+<<<<<<< HEAD
 =item * if you configure your local ENV's with GitHuB Access you can also do GitHub Pull requests,
+=======
+=item * if you configure your local ENV with GitHub Access you can also do GitHub Pull requests,
+>>>>>>> 42555c5dc8988df26a4cb95b9f17d8a516a03bff
 
 =item * plus if you use {{$NEXT}} in your Changes file it will append commit messages below.
 see L<wiki|http://padre.perlide.org/trac/wiki/PadrePluginGit> for more info.
 
 =back
+<<<<<<< HEAD
     
+=======
+
+>>>>>>> 42555c5dc8988df26a4cb95b9f17d8a516a03bff
 =head1 METHODS
 
 =over 4
@@ -820,12 +860,21 @@ see L<wiki|http://padre.perlide.org/trac/wiki/PadrePluginGit> for more info.
 
 =item * git_patch
 
+<<<<<<< HEAD
 =item * github_pull_request 
  
 =item * load_dialog_output 
  
 =item * menu_plugins_simple 
 	
+=======
+=item * github_pull_request
+
+=item * load_dialog_output
+
+=item * menu_plugins_simple
+
+>>>>>>> 42555c5dc8988df26a4cb95b9f17d8a516a03bff
 =item *	on_finish
 
 =item *	padre_interfaces
@@ -842,7 +891,11 @@ see L<wiki|http://padre.perlide.org/trac/wiki/PadrePluginGit> for more info.
 
 =item * write_changes
 
+<<<<<<< HEAD
 use CPAN::Changes to write git commits to project Change file, 
+=======
+use CPAN::Changes to write git commits to project Change file,
+>>>>>>> 42555c5dc8988df26a4cb95b9f17d8a516a03bff
 this abuses the {{$NEXT}} token as a valid version
 see CPAN::Changes::Spec for format
 
@@ -854,7 +907,11 @@ To be able to do a GitHub Pull request, the following need to be configured.
 
 	$ENV{GITHUB_USER}
 	$ENV{GITHUB_TOKEN}
+<<<<<<< HEAD
   
+=======
+
+>>>>>>> 42555c5dc8988df26a4cb95b9f17d8a516a03bff
 
 =head1 AUTHOR
 
@@ -865,6 +922,7 @@ Kaare Rasmussen, E<lt>kaare@cpan.orgE<gt>
 
 =head2 CONTRIBUTORS
 
+<<<<<<< HEAD
 Dominique Dumont E<lt>dod@debian.orgE<gt>
 
 
@@ -887,4 +945,31 @@ under the same terms as Perl itself.
 # LICENSE
 # This program is free software; you can redistribute it and/or
 # modify it under the same terms as Perl 5 itself.
+=======
+Alexandr Ciornii E<lt>alexchorny@gmail.comE<gt>
+
+Ryan Niebur E<lt>ryanryan52@gmail.comE<gt>
+
+Dominique Dumont E<lt>dod@debian.orgE<gt>
+
+perlbotics E<lt>perlbotics@yahoo.deE<gt>
+
+=head1 BUGS
+
+Please report any bugs or feature requests to L<https://github.com/PadreIDE/Padre-Plugin-Git/issues>
+
+=head1 COPYRIGHT
+
+Copyright E<copy> 2009-2011 Kaare Rasmussen
+
+Copyright E<copy> 2009-2013 the Padre::Plugin::Git  L</AUTHOR> and L</CONTRIBUTORS>
+as listed above.
+
+=head1 LICENSE
+
+This program is free software; you can redistribute it and/or modify
+ it under the same terms as Perl 5 itself.
+
+=cut
+>>>>>>> 42555c5dc8988df26a4cb95b9f17d8a516a03bff
 

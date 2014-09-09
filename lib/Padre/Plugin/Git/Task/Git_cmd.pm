@@ -1,10 +1,18 @@
 package Padre::Plugin::Git::Task::Git_cmd;
 
 use v5.10;
+<<<<<<< HEAD
 use strictures 1;
 
 use Carp qw( croak );
 our $VERSION = '0.11';
+=======
+use strict;
+use warnings;
+
+use Carp qw( croak );
+our $VERSION = '0.12';
+>>>>>>> 42555c5dc8988df26a4cb95b9f17d8a516a03bff
 
 use Padre::Task   ();
 use Padre::Unload ;
@@ -52,7 +60,11 @@ sub run {
 		$git_cmd->{output} = $git_cmd->{error};
 		$git_cmd->{error}  = undef;
 	}
+<<<<<<< HEAD
 	
+=======
+
+>>>>>>> 42555c5dc8988df26a4cb95b9f17d8a516a03bff
 	#saving to $self makes thing availbe to on_finish under $task
 
 	$self->{error}  = $git_cmd->{error};
@@ -70,13 +82,22 @@ Perl programming -> TIOBE
 
 =pod
 
+<<<<<<< HEAD
+=======
+=encoding utf8
+
+>>>>>>> 42555c5dc8988df26a4cb95b9f17d8a516a03bff
 =head1 NAME
 
 Padre::Plugin::Git::Task::Git_cmd - Git plugin for Padre, The Perl IDE.
 
 =head1 VERSION
 
+<<<<<<< HEAD
 version 0.11
+=======
+version 0.12
+>>>>>>> 42555c5dc8988df26a4cb95b9f17d8a516a03bff
 
 =head1 SYNOPSIS
 
@@ -123,6 +144,7 @@ etc.), refer to L<Padre::Plugin::Git>.
 
 =head1 AUTHOR
 
+<<<<<<< HEAD
 Kevin Dawson E<lt>bowtie@cpan.orgE<gt>
 
 
@@ -139,3 +161,20 @@ modify it under the same terms as Perl 5 itself.
 # LICENSE
 # This program is free software; you can redistribute it and/or
 # modify it under the same terms as Perl 5 itself.
+=======
+See L<Padre::Plugin::Git>
+
+=head2 CONTRIBUTORS
+
+See L<Padre::Plugin::Git>
+
+=head1 COPYRIGHT
+
+See L<Padre::Plugin::Git>
+
+=head1 LICENSE
+
+See L<Padre::Plugin::Git>
+
+=cut
+>>>>>>> 42555c5dc8988df26a4cb95b9f17d8a516a03bff
