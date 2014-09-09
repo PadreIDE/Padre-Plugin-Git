@@ -20,7 +20,7 @@ test_requires Test::More  0.98
 
 homepage    http://padre.perlide.org/trac/wiki/PadrePluginGit
 bugtracker  http://padre.perlide.org/trac/wiki/Tickets
-repository  http://svn.perlide.org/padre/trunk/Padre-Plugin-Git/
+repository  https://github.com/PadreIDE/Padre-Plugin-Git/
 
 install_share
 
