@@ -5,28 +5,6 @@ requires_from lib/Padre/Plugin/Git.pm
 requires_from lib/Padre/Plugin/Git/Output.pm
 requires_from lib/Padre/Plugin/Git/Message.pm
 
-<<<<<<< HEAD
-requires CPAN::Changes 0.19
-# requires Carp          1.26
-# requires Data::Printer 0.33
-requires File::Slurp   9999.19
-# requires File::Spec    3.33
-requires File::Which   1.09
-requires Padre         0.96
-requires Pithub        0.01016
-requires Try::Tiny     0.12
-requires strictures    1.004004
-
-test_requires Test::More  0.98
-
-homepage    http://padre.perlide.org/trac/wiki/PadrePluginGit
-bugtracker  http://padre.perlide.org/trac/wiki/Tickets
-repository  https://github.com/PadreIDE/Padre-Plugin-Git/
-
-install_share
-
-no_index directory  qw{ t xt eg share inc privinc }
-=======
 perl_version 5.010001
 
 requires CPAN::Changes 0.23
@@ -58,4 +36,3 @@ install_share
 
 no_index directory qw{ share t }
 
->>>>>>> 42555c5dc8988df26a4cb95b9f17d8a516a03bff

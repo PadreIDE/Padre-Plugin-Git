@@ -1,23 +1,15 @@
 package Padre::Plugin::Git::Message;
 
 use v5.10;
-<<<<<<< HEAD
-use strictures 1;
-=======
 use strict;
 use warnings;
->>>>>>> 42555c5dc8988df26a4cb95b9f17d8a516a03bff
 
 use Padre::Unload                    ();
 use Padre::Plugin::Git::FBP::Message ();
 use File::Spec;
 use File::Slurp;
 
-<<<<<<< HEAD
-our $VERSION = '0.11';
-=======
 our $VERSION = '0.12';
->>>>>>> 42555c5dc8988df26a4cb95b9f17d8a516a03bff
 use parent qw(
 	Padre::Plugin::Git::FBP::Message
 	Padre::Plugin
@@ -95,22 +87,15 @@ Perl programming -> TIOBE
 
 =pod
 
-<<<<<<< HEAD
-=======
 =encoding utf8
 
->>>>>>> 42555c5dc8988df26a4cb95b9f17d8a516a03bff
 =head1 NAME
 
 Padre::Plugin::Git::Message - Git plugin for Padre, The Perl IDE.
 
 =head1 VERSION
 
-<<<<<<< HEAD
-version 0.11
-=======
 version 0.12
->>>>>>> 42555c5dc8988df26a4cb95b9f17d8a516a03bff
 
 =head1 DESCRIPTION
 
@@ -146,25 +131,6 @@ etc.), refer to L<Padre::Plugin::Git>.
 
 =head1 AUTHOR
 
-<<<<<<< HEAD
-Kevin Dawson E<lt>bowtie@cpan.orgE<gt>
-
-=head1 COPYRIGHT AND LICENSE
-
-Copyright (c) 2012 kevin dawson, all rights reserved.
-
-This is free software; you can redistribute it and/or modify it under
-the same terms as the Perl 5 programming language system itself.
-
-=cut
-
-
-# Copyright 2008-2012 The Padre development team as listed in Padre.pm.
-# LICENSE
-# This program is free software; you can redistribute it and/or
-# modify it under the same terms as Perl 5 itself.
-
-=======
 See L<Padre::Plugin::Git>
 
 =head2 CONTRIBUTORS
@@ -180,4 +146,3 @@ See L<Padre::Plugin::Git>
 See L<Padre::Plugin::Git>
 
 =cut
->>>>>>> 42555c5dc8988df26a4cb95b9f17d8a516a03bff

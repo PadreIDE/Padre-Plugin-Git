@@ -1,18 +1,11 @@
 package Padre::Plugin::Git::Task::Git_patch;
 
 use v5.10;
-<<<<<<< HEAD
-use strictures 1;
-
-use Carp qw( croak );
-our $VERSION = '0.11';
-=======
 use strict;
 use warnings;
 
 use Carp qw( croak );
 our $VERSION = '0.12';
->>>>>>> 42555c5dc8988df26a4cb95b9f17d8a516a03bff
 
 use Padre::Task ();
 use Padre::Unload;
@@ -70,15 +63,8 @@ sub run {
 	} else {
 		$system = qq(xterm -sb -e "$cmd ; sleep 1000" &);
 	}
-<<<<<<< HEAD
-	
-	# say $system;
-
-
-=======
 
 	# say $system;
->>>>>>> 42555c5dc8988df26a4cb95b9f17d8a516a03bff
 
 	my $git_patch;
 	require Padre::Util;
@@ -118,22 +104,15 @@ Perl programming -> TIOBE
 
 =pod
 
-<<<<<<< HEAD
-=======
 =encoding utf8
 
->>>>>>> 42555c5dc8988df26a4cb95b9f17d8a516a03bff
 =head1 NAME
 
 Padre::Plugin::Git::Task::Git_cmd - Git plugin for Padre, The Perl IDE.
 
 =head1 VERSION
 
-<<<<<<< HEAD
-version 0.11
-=======
 version 0.12
->>>>>>> 42555c5dc8988df26a4cb95b9f17d8a516a03bff
 
 =head1 SYNOPSIS
 
@@ -180,24 +159,6 @@ etc.), refer to L<Padre::Plugin::Git>.
 
 =head1 AUTHOR
 
-<<<<<<< HEAD
-Kevin Dawson E<lt>bowtie@cpan.orgE<gt>
-
-
-=head1 COPYRIGHT AND LICENSE
-
-Copyright 2008-2012 The Padre development team as listed in Padre.pm.
-
-This program is free software; you can redistribute it and/or
-modify it under the same terms as Perl 5 itself.
-
-=cut
-
-# Copyright 2008-2012 The Padre development team as listed in Padre.pm.
-# LICENSE
-# This program is free software; you can redistribute it and/or
-# modify it under the same terms as Perl 5 itself.
-=======
 See L<Padre::Plugin::Git>
 
 =head2 CONTRIBUTORS
@@ -213,4 +174,3 @@ See L<Padre::Plugin::Git>
 See L<Padre::Plugin::Git>
 
 =cut
->>>>>>> 42555c5dc8988df26a4cb95b9f17d8a516a03bff
